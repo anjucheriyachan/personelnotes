@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCJ8u84_Peem35l459mB0aStAiyumcn4sw',
-    appId: '1:918649028332:android:690421d4ba3b145bb86fc9',
+    appId: '1:918649028332:android:e0ff53a023d2e309b86fc9',
     messagingSenderId: '918649028332',
     projectId: 'personalnotes-4803f',
     storageBucket: 'personalnotes-4803f.firebasestorage.app',
@@ -60,29 +60,29 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBqbzwOAXB5GgGFuziytEfdvkKPAplrGKs',
-    appId: '1:918649028332:ios:1e141eb6bd4a4ccbb86fc9',
+    appId: '1:918649028332:ios:d15698f1cd7e1618b86fc9',
     messagingSenderId: '918649028332',
     projectId: 'personalnotes-4803f',
     storageBucket: 'personalnotes-4803f.firebasestorage.app',
-    iosBundleId: 'com.example.personalnotes',
+    iosBundleId: 'com.example.note',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyBqbzwOAXB5GgGFuziytEfdvkKPAplrGKs',
-    appId: '1:918649028332:ios:1e141eb6bd4a4ccbb86fc9',
+    appId: '1:918649028332:ios:d15698f1cd7e1618b86fc9',
     messagingSenderId: '918649028332',
     projectId: 'personalnotes-4803f',
     storageBucket: 'personalnotes-4803f.firebasestorage.app',
-    iosBundleId: 'com.example.personalnotes',
+    iosBundleId: 'com.example.note',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyDTK_XFX8DYm9p0mLd5LVm4yUhkr4SYvlE',
-    appId: '1:918649028332:web:c8dd797ba62b452ab86fc9',
+    appId: '1:918649028332:web:aead65f24a5ecdcfb86fc9',
     messagingSenderId: '918649028332',
     projectId: 'personalnotes-4803f',
     authDomain: 'personalnotes-4803f.firebaseapp.com',
     storageBucket: 'personalnotes-4803f.firebasestorage.app',
-    measurementId: 'G-59F7E6ZT9E',
+    measurementId: 'G-NVZP6323N5',
   );
 }
