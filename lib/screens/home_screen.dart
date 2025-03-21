@@ -1,17 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:note/profile_screen.dart';
-import 'package:provider/provider.dart';
-import 'AuthProvider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/auth_bloc/auth_bloc.dart';
+import '../shared/routes/app_routes.dart';
 import 'note_details_screen.dart';
-import 'note_edit_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<AuthProvider>(context).currentUser;
+    final authState = context.watch<AuthBloc>().state;
+    final user = authState is AuthAuthenticated ? authState.user : null;
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -23,8 +26,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.amber.shade700,
         actions: [
           IconButton(
-            onPressed: () => Navigator.push(
-                context, MaterialPageRoute(builder: (_) => ProfileScreen())),
+            onPressed: () => Navigator.pushNamed(context, AppRouter.profile),
             icon: Icon(Icons.person, color: Colors.black),
           ),
         ],
@@ -32,14 +34,15 @@ class HomeScreen extends StatelessWidget {
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('notes')
-            .where('userId', isEqualTo: user!.uid)
+            .where('userId', isEqualTo: user?.uid)
             .snapshots(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return Center(
-                child: CircularProgressIndicator(
-                  color: Colors.amber.shade700,
-                ));
+              child: CircularProgressIndicator(
+                color: Colors.amber.shade700,
+              ),
+            );
           }
           final notes = snapshot.data!.docs;
           return ListView.builder(
@@ -80,8 +83,7 @@ class HomeScreen extends StatelessWidget {
         foregroundColor: Colors.black,
         shape:
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-        onPressed: () => Navigator.push(context,
-            MaterialPageRoute(builder: (_) => NoteEditScreen())),
+        onPressed: () => Navigator.pushNamed(context, AppRouter.editNote),
         child: Icon(Icons.add),
       ),
     );
