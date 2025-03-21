@@ -43,11 +43,13 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 TextField(
+                  style: const TextStyle(color: Colors.white),
                   controller: _emailController,
                   decoration: const InputDecoration(labelText: 'Email'),
                 ),
                 const SizedBox(height: 20),
                 TextField(
+                  style: const TextStyle(color: Colors.white),
                   controller: _passwordController,
                   obscureText: true,
                   decoration: const InputDecoration(labelText: 'Password'),

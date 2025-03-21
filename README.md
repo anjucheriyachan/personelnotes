@@ -1,16 +1,8 @@
-# note
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This app consists of a SignUp with email and password and stores in firebase cloud storage. 
+You may register with any email and password.
+Then login with same user name and password
+In home screen there is notes listing screen
+You may add new note in edit notes
+Provide Title and content
+All the added notes will be listed in the Home screen
+On click of Profile, user may logout

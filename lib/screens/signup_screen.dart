@@ -46,11 +46,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: [
                 TextField(
                   controller: _emailController,
+                  style: const TextStyle(color: Colors.white),
                   decoration: const InputDecoration(labelText: 'Email'),
                 ),
                 const SizedBox(height: 20),
                 TextField(
                   controller: _passwordController,
+                  style: const TextStyle(color: Colors.white),
                   obscureText: true,
                   decoration: const InputDecoration(labelText: 'Password'),
                 ),

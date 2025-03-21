@@ -42,7 +42,7 @@ dependencies:
   equatable:
   bloc:
   flutter_bloc:
-
+  google_sign_in: ^6.3.0
 
 
 
